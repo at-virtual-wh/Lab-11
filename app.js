@@ -1,6 +1,6 @@
 //Punto 1
 function verificarCalificacion() {
-    const grado = parseInt(document.getElementById("grado").value);
+    let grado = parseInt(document.getElementById("grado").value);
     let mensaje = "";
     if (grado >= 90) {
         mensaje = "Aprobado con honores";
@@ -14,7 +14,7 @@ function verificarCalificacion() {
 
 //Punto 2
 function determinarParidad() {
-    const parImpar = parseInt(document.getElementById("parImpar").value);
+    let parImpar = parseInt(document.getElementById("parImpar").value);
     let mensaje = "";
     if (parImpar % 2 === 0) {
         mensaje = "El número es par";
@@ -26,18 +26,18 @@ function determinarParidad() {
 
 //Punto 3
 function evaluarDescuento() {
-    const descuento = parseFloat(document.getElementById("descuento").value);
+    let descuento = parseInt(document.getElementById("descuento").value);
     let precioFinal = descuento;
     if (descuento > 100000) {
         precioFinal = descuento * 0.9; // Aplica descuento del 10%
     }
-    document.getElementById("descuentoSalida").innerText = `Monto final a pagar: $${precioFinal.toFixed(0)}`;
+    document.getElementById("descuentoSalida").innerText = `Monto final a pagar: $${precioFinal}`;
 }
 
 //Punto 4
 function jugarAdivinanza() {
-    const adivinar = parseInt(document.getElementById("adivinar").value);
-    const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+    let adivinar = parseInt(document.getElementById("adivinar").value);
+    let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
     let mensaje = "";
     if (adivinar === numeroAleatorio) {
         mensaje = "¡Felicidades, adivinaste el número!";
